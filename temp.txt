@@ -1,2 +1,2 @@
 command to run:
-bundle exec jeykll serve
+bundle exec jekyll serve
