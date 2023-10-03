@@ -39,14 +39,10 @@ masthead_title: "My Custom Title"
 # Site Author
 author:
   name             : "Name"
-  avatar           : "/"
+  avatar           : "/assets/images/bio/bio.jpg"
   bio              : "bio"
-  location         : "location"
   email            :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: 
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/LancersBucket"
