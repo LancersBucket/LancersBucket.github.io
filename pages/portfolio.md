@@ -1,7 +1,7 @@
 ---
 layout: single
 classes: wide
-permalink: projects
+permalink: /projects/
 author_profile: false
 feature_row:
   - image_path: /assets/images/projects/ratandthehat.png
