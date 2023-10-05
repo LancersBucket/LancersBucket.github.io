@@ -5,7 +5,7 @@ permalink: /projects/
 author_profile: false
 feature_row:
   - image_path: /assets/images/projects/ratandthehat.png
-    alt: ""
+    alt: "The Rat And the Hat"
     title: "The Rat And the Hat"
     excerpt: "Made for Go Godot Jam 4 on itch.io <br> Lead Programmer"
     url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
@@ -14,6 +14,11 @@ feature_row:
   - image_path: /assets/images/bio/bio.jpg
     alt: "placeholder image 2"
     title: "Image 2 title caption"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    #url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
+  - image_path: /assets/images/bio/bio.jpg
+    alt: "placeholder image 3"
+    title: "Image 3 title caption"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
     #url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
   - image_path: /assets/images/bio/bio.jpg

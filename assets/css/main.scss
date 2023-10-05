@@ -9,7 +9,9 @@
 
 .ultrawide {
     .page {
-      float: left;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1em;
       width: 100%;
       @include breakpoint($large) {
         padding-left: 0;
