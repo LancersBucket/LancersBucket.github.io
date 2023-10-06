@@ -25,9 +25,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: ""
 url:  # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+twitter_username: 
 github_username:  LancersBucket
 
 # Build settings
@@ -39,11 +39,8 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-feed:
-  disable: true
 atom_feed:
   hide: true
-
 
 masthead_title: "My Custom Title"
 
@@ -51,7 +48,7 @@ masthead_title: "My Custom Title"
 author:
   name             : "Name"
   avatar           : "/assets/images/bio/bio.jpg"
-  bio              : "It do be how it do be tho sometimes times"
+  bio              : "It do be how it do be tho sometimes-times"
   email            :
   links:
     - label: "GitHub"
@@ -60,22 +57,18 @@ author:
 
 # Exclude from processing.
 # The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 exclude:
   - temp.txt
+#  - .sass-cache/
+#  - .jekyll-cache/
+#  - gemfiles/
+#  - Gemfile
+#  - Gemfile.lock
+#  - node_modules/
+#  - vendor/bundle/
+#  - vendor/cache/
+#  - vendor/gems/
+#  - vendor/ruby/

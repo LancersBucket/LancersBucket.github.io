@@ -7,27 +7,19 @@ feature_row:
   - image_path: /assets/images/projects/ratandthehat.png
     alt: "The Rat And the Hat"
     title: "The Rat And the Hat"
-    excerpt: "Made for Go Godot Jam 4 on itch.io <br> Lead Programmer"
-    url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
-    btn_label: "Project Page"
-    btn_class: "btn--inverse"
+    excerpt: "Made for [Go Godot Jam 4](https://itch.io/jam/go-godot-jam-4) on itch.io <br> Lead Programmer <br><br> [Live Demo](https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat){: .btn .btn--primary .btn--large} [Source Code](https://github.com/LancersBucket/GodotGame){: .btn .btn--primary .btn--large}"
   - image_path: /assets/images/bio/bio.jpg
     alt: "placeholder image 2"
     title: "Thorium"
     excerpt: "This is some sample content that goes here with **Markdown** formatting. this has more text at the end to test spacing, and a button too"
-    btn_label: "Project Page"
-    btn_class: "btn--inverse"
-    url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
   - image_path: /assets/images/bio/bio.jpg
     alt: "placeholder image 3"
     title: "Sodium"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    #url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
   - image_path: /assets/images/bio/bio.jpg
     alt: "placeholder image 3"
     title: "Sulfur"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    #url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
 title: Previous Projects
 ---
 
