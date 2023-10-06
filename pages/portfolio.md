@@ -13,17 +13,19 @@ feature_row:
     btn_class: "btn--inverse"
   - image_path: /assets/images/bio/bio.jpg
     alt: "placeholder image 2"
-    title: "Image 2 title caption"
+    title: "Thorium"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting. this has more text at the end to test spacing, and a button too"
+    btn_label: "Project Page"
+    btn_class: "btn--inverse"
+    url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
+  - image_path: /assets/images/bio/bio.jpg
+    alt: "placeholder image 3"
+    title: "Sodium"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
     #url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
   - image_path: /assets/images/bio/bio.jpg
     alt: "placeholder image 3"
-    title: "Image 3 title caption"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    #url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
-  - image_path: /assets/images/bio/bio.jpg
-    alt: "placeholder image 3"
-    title: "Image 3 title caption"
+    title: "Sulfur"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
     #url: https://bucket-o-wet-slop.itch.io/the-rat-and-the-hat
 title: Previous Projects
