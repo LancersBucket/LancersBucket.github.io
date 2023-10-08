@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Example Title
-email: your-email@example.com
+title: My Website
+email: 
 name: Fey Raptor
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -28,7 +28,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url:  # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
-github_username:  LancersBucket
+github_username: LancersBucket
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
@@ -42,13 +42,13 @@ plugins:
 atom_feed:
   hide: true
 
-masthead_title: "My Custom Title"
+masthead_title: "How Doers Get More Done"
 
 # Site Author
 author:
   name             : "Name"
   avatar           : "/assets/images/bio/bio.jpg"
-  bio              : "It do be how it do be tho sometimes-times"
+  bio              : "\"It do be how it do be though sometimes-times\""
   email            :
   links:
     - label: "GitHub"
