@@ -15,7 +15,7 @@ feature_row:
   - image_path: /assets/images/bio/bio.jpg
     alt: "lancersbucket.github.io"
     title: "lancersbucket.github.io"
-    excerpt: "The website that hosts everything you need to know about me. <br> <img id=gmail_test> <br> <br><br> [Live Demo](https://lancersbucket.github.io){:target='_blank' .btn .btn--primary .btn--large} [Source Code](https://github.com/LancersBucket/lancersbucket.github.io){:target='_blank' .btn .btn--primary .btn--large}"
+    excerpt: "The website that hosts everything you need to know about me. <br> <img id=lancersbucket_test> <br><br> [Live Demo](https://lancersbucket.github.io){:target='_blank' .btn .btn--primary .btn--large} [Source Code](https://github.com/LancersBucket/lancersbucket.github.io){:target='_blank' .btn .btn--primary .btn--large}"
   - image_path: /assets/images/bio/bio.jpg
     alt: "placeholder image 3"
     title: "Sulfur"
@@ -26,23 +26,17 @@ title: Previous Projects
 {% include feature_row %}
 
 <script type="text/javascript">
+// Adapted from https://stackoverflow.com/a/4814918
 function set_test(name,status){
     var el=document.getElementById(name+'_test');
     el.src=status?'https://img.shields.io/badge/status-up-green:':'https://img.shields.io/badge/status-down-red';
-    el.style.color=status?'#0a0':'#a00';
-    el.style.fontWeight='bold';
-    
 }
 (function(){
-    var gmail_test=document.getElementById('gmail_test');
+    var gmail_test=document.getElementById('lancersbucket_test');
     gmail_test.innerHTML='Checking...';
     var img=document.createElement('img');
-    //img.src='https://lancersbucket.github.io/assets/images/bio/bio.jpg';
-    img.src = 'https://lancersbucket.github.io/favicon.ico';
-    img.onload=function(){set_test('gmail',1)};
-    img.onerror=function(){set_test('gmail',0)};
-    img.style.display='none';
-    document.body.appendChild(img);
-    console.log("tested")
+    img.src='https://lancersbucket.github.io/assets/images/bio/bio.jpg';
+    img.onload=function(){set_test('lancersbucket',1)};
+    img.onerror=function(){set_test('lancersbucket',0)};
 })();
 </script>
