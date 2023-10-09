@@ -6,7 +6,7 @@ function set_test(name,status){
     el.src=status?'https://img.shields.io/badge/lancersbucket.github.io_status-up-green:':'https://img.shields.io/badge/lancersbucket.github.io_status-down-red';
 }
 
-// Loads an image from lancersbucket.github.io to see if it is accessable
+// Loads an image from lancersbucket.github.io to see if it is up
 (function(){
     // Create an element to load the image
     var img=document.createElement('img');

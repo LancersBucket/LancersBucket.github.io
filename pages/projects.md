@@ -20,7 +20,7 @@ feature_row:
     alt: "placeholder image 3"
     title: "Sulfur"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
-title: Previous Projects
+title: Projects
 ---
 
 {% include feature_row %}

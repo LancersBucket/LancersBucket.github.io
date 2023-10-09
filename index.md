@@ -1,7 +1,7 @@
 ---
 layout: single
-author_profile: true
 permalink: "/"
+author_profile: true
 title: Landing Page
 ---
 
