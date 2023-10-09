@@ -1,4 +1,5 @@
 /* Adapted from https://stackoverflow.com/a/4814918 */
+
 // Sets the img tag source to either a sheild.io up or down badge depending on the status of lancersbucket.github.io
 function set_test(name,status){
     var el=document.getElementById(name+'_test');
