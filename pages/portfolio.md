@@ -15,7 +15,7 @@ feature_row:
   - image_path: /assets/images/bio/bio.jpg
     alt: "lancersbucket.github.io"
     title: "lancersbucket.github.io"
-    excerpt: "The website that hosts everything you need to know about me. <br> <img id=lancersbucket_test> <br><br> [Live Demo](https://lancersbucket.github.io){:target='_blank' .btn .btn--primary .btn--large} [Source Code](https://github.com/LancersBucket/lancersbucket.github.io){:target='_blank' .btn .btn--primary .btn--large}"
+    excerpt: "The website that hosts everything you need to know about me. <img id=lancersbucket_test> <br><br> [Live Demo](https://lancersbucket.github.io){:target='_blank' .btn .btn--primary .btn--large} [Source Code](https://github.com/LancersBucket/lancersbucket.github.io){:target='_blank' .btn .btn--primary .btn--large}"
   - image_path: /assets/images/bio/bio.jpg
     alt: "placeholder image 3"
     title: "Sulfur"
@@ -26,17 +26,20 @@ title: Previous Projects
 {% include feature_row %}
 
 <script type="text/javascript">
-// Adapted from https://stackoverflow.com/a/4814918
+/* Adapted from https://stackoverflow.com/a/4814918 */
+// Sets the img tag source to either a sheild.io up or down badge depending on the status of lancersbucket.github.io
 function set_test(name,status){
-    var el=document.getElementById(name+'_test');
-    el.src=status?'https://img.shields.io/badge/status-up-green:':'https://img.shields.io/badge/status-down-red';
+  var el=document.getElementById(name+'_test');
+  el.src=status?'https://img.shields.io/badge/lancersbucket.github.io_status-up-green:':'https://img.shields.io/badge/lancersbucket.github.io_status-down-red';
 }
+// Loads an image from lancersbucket.github.io to see if it is accessable
 (function(){
-    var gmail_test=document.getElementById('lancersbucket_test');
-    gmail_test.innerHTML='Checking...';
-    var img=document.createElement('img');
-    img.src='https://lancersbucket.github.io/assets/images/bio/bio.jpg';
-    img.onload=function(){set_test('lancersbucket',1)};
-    img.onerror=function(){set_test('lancersbucket',0)};
+  // Create an element to load the image
+  var img=document.createElement('img');
+  img.src='https://lancersbucket.github.io/assets/images/bio/bio.jpg';
+  // If the image loads, set the status to 1 (up)
+  img.onload=function(){set_test('lancersbucket',1)};
+  // If the image doesn't load, set the status to 0 (down)
+  img.onerror=function(){set_test('lancersbucket',0)};
 })();
 </script>
