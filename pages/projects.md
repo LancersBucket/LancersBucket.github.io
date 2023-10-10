@@ -12,7 +12,7 @@ feature_row:
     alt: "Shuffle--"
     title: "Shuffle--"
     excerpt: "A simple music playing application designed to purely shuffle your music. <br><br> [Source Code](https://github.com/LancersBucket/Shuffle--){:target='_blank' .btn .btn--primary .btn--large}"
-  - image_path: /assets/images/bio/bio.jpg
+  - image_path: /assets/images/projects/github-io.png
     alt: "lancersbucket.github.io"
     title: "lancersbucket.github.io"
     excerpt: "The website that hosts everything you need to know about me. <img id=lancersbucket_test> <br><br> [Live Demo](https://lancersbucket.github.io){:target='_blank' .btn .btn--primary .btn--large} [Source Code](https://github.com/LancersBucket/lancersbucket.github.io){:target='_blank' .btn .btn--primary .btn--large}"
