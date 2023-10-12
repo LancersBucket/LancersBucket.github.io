@@ -66,6 +66,7 @@ author:
 exclude:
   - temp.txt
   - readme.md
+  - '*.code-workspace'
 #  - .sass-cache/
 #  - .jekyll-cache/
 #  - gemfiles/
