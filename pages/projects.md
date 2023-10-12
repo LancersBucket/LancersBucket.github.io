@@ -23,6 +23,34 @@ feature_row:
 title: Projects
 ---
 
-{% include feature_row %}
+<script type="text/javascript">
+/* Adapted from https://stackoverflow.com/a/4814918 */
 
-<script type="text/javascript" src="../assets/js/statuschecker.js"></script>
+// Sets the img tag source to a sheild.io up or down badge depending on the status of lancersbucket.github.io
+function set_test(name,status){
+    console.log("help")
+    var el=document.getElementById(name);
+    if (status == 1) {
+        el.src='https://img.shields.io/badge/lancersbucket.github.io_status-up-green';
+    }
+    else {
+        el.src='https://img.shields.io/badge/lancersbucket.github.io_status-down-red';
+    }
+    console.log("agb")
+}
+// Loads an image from lancersbucket.github.io to see if it is up
+(function(){
+    // Create an element to load the image
+    var img=document.createElement('img');
+    img.src='https://lancersbucket.github.io/assets/images/bio/bio.jpg';
+    console.log("init")
+    // If the image loads, set the status to 1 (up)
+    img.onload=function(){set_test('lancersbucket_test',1)};
+    // If the image doesn't load, set the status to 0 (down)
+    img.onerror=function(){set_test('lancersbucket_test',0)};
+    img.style.display='none';
+    document.body.appendChild(img)
+})();
+</script>
+
+{% include feature_row %}
