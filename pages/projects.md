@@ -30,9 +30,11 @@ title: Projects
 function set_test(name,status){
     var el=document.getElementById(name);
     if (status == 1) {
-        el.src='https://img.shields.io/badge/lancersbucket.github.io_Status-Up-green';
+      el.src='https://img.shields.io/badge/lancersbucket.github.io_Status-Up-green';
+    } else if (status == 0) {
+      el.src='https://img.shields.io/badge/lancersbucket.github.io_Status-Down-red';
     } else {
-        el.src='https://img.shields.io/badge/lancersbucket.github.io_Status-Down-red';
+      el.src='https://img.shields.io/badge/lancersbucket.github.io_Status-Unknown-FFA500';
     }
 }
 // Loads an image from lancersbucket.github.io to see if it is up
@@ -44,8 +46,9 @@ function set_test(name,status){
     img.onload=function(){set_test('lancersbucket_test',1)};
     // If the image doesn't load, set the status to 0 (down)
     img.onerror=function(){set_test('lancersbucket_test',0)};
+    set_test('lancersbucket_test',2);
     img.style.display='none';
-    document.body.appendChild(img)
+    document.body.appendChild(img);
 })();
 </script>
 
