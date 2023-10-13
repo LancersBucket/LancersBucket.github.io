@@ -28,22 +28,18 @@ title: Projects
 
 // Sets the img tag source to a sheild.io up or down badge depending on the status of lancersbucket.github.io
 function set_test(name,status){
-    console.log("help")
     var el=document.getElementById(name);
     if (status == 1) {
-        el.src='https://img.shields.io/badge/lancersbucket.github.io_status-up-green';
+        el.src='https://img.shields.io/badge/lancersbucket.github.io_Status-Up-green';
+    } else {
+        el.src='https://img.shields.io/badge/lancersbucket.github.io_Status-Down-red';
     }
-    else {
-        el.src='https://img.shields.io/badge/lancersbucket.github.io_status-down-red';
-    }
-    console.log("agb")
 }
 // Loads an image from lancersbucket.github.io to see if it is up
 (function(){
     // Create an element to load the image
     var img=document.createElement('img');
     img.src='https://lancersbucket.github.io/assets/images/bio/bio.jpg';
-    console.log("init")
     // If the image loads, set the status to 1 (up)
     img.onload=function(){set_test('lancersbucket_test',1)};
     // If the image doesn't load, set the status to 0 (down)
