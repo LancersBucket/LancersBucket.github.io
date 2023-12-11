@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temp</title>
+  <style>
+    #calculatedMessage {
+      font-size: 24px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: wrap;
+      text-align:start;
+    }
+  </style>
+</head>
+<body>
+  <div id="calculatedMessage">To Be Determined</div>
+  <button onclick="recode()">Decode</button>
+
+  <script>
+    const validCharacters = "_?,!.ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function recode() {
+      var calculatedElement = document.getElementById("calculatedMessage");
+      var calculatedMessage = calculatedElement.textContent;
+      var math = def(calculatedMessage);
+
+      for (var i = 0; i < calculatedMessage.length; i++) {
+        await rotateCharacter(i, calculatedMessage, math, calculatedElement);
+      }
+    }
+
+    async function rotateCharacter(index, calculatedMessage, math, calculatedElement) {
+      var currentChar = math.charAt(index);
+      var rotatedChar = calculatedMessage.charAt(index);
+
+      while (rotatedChar !== currentChar) {
+        rotatedChar = rotateCharacterHelper(rotatedChar);
+        math = math.substring(0, index) + rotatedChar + calculatedMessage.substring(index + 1);
+        calculatedElement.textContent = math;
+        await sleep(1);
+      }
+    }
+
+    function rotateCharacterHelper(char) {
+      var charCode = char.charCodeAt(0);
+      var charIndex = validCharacters.indexOf(char);
+      return validCharacters[(charIndex + 1) % validCharacters.length];
+    }
+
+    // ROT47
+    function def(text) {
+      return text.replace(/./g, function (char) {
+        const charCode = char.charCodeAt(0);
+        if (charCode >= 33 && charCode <= 126) {
+          return String.fromCharCode(33 + ((charCode + 14) % 94));
+        } else {
+          return char;
+        }
+      });
+    }
+	</script>
+</body>
+</html>
