@@ -1,68 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temp</title>
-  <style>
-    #calculatedMessage {
-      font-size: 24px;
-      font-weight: bold;
-      overflow: hidden;
-      white-space: wrap;
-      text-align:start;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp</title>
+    <style>
+        #calculatedMessage {
+            font-size: 24px;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: pre-line;
+            text-align:start;
+        }
+    </style>
 </head>
 <body>
-  <div id="calculatedMessage">%9:D :D 2? 6I2>A=6 4@56</div>
-  <button onclick="recode()">Decode</button>
+    <div id="calculatedMessage">tI2>A=6 4@56
+    </div>
+    <br>
+    
+    <div id="errormsg" style="color:red"></div>
+    <button onclick="checkSolution()">Decode</button>
+    <br><br>
+    
+    <div>1. The column number of each light from left to right, top to bottom i.e. (r1c2 r1c5 r2c3 = 253):</div>
+    <a href="https://puzz.link/p?akari/7/9/o..agcgaj.j2.jbi.l11..cl" target="_blank">https://puzz.link/p?akari/7/9/o..agcgaj.j2.jbi.l11..cl</a>
+    <br>
+    <input type="text" id="lights" name="lights" placeholder="Enter column numbers">
+    <br><br>
 
-  <script>
-    const validCharacters = "_?,!.ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    function sleep(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
+    <div>2. Full chess notation of solution:</div>
+    <a href="https://chesspuzzle.net/Puzzle/284336" target="_blank">https://chesspuzzle.net/Puzzle/284336</a>
+    <br>
+    <input type="text" id="chessNotation" name="chessNotation" placeholder="Enter chess notation">
+    <br><br>
 
-    async function recode() {
-      var calculatedElement = document.getElementById("calculatedMessage");
-      var calculatedMessage = calculatedElement.textContent;
-      var math = def(calculatedMessage);
+    <div>3. Number of times the word "bee" and only "bee" spoken in the bee movie?</div>
+    <input type="text" id="beeMovie" name="beeMovie" placeholder="Enter the count">
+    <br><br>
 
-      for (var i = 0; i < calculatedMessage.length; i++) {
-        await rotateCharacter(i, calculatedMessage, math, calculatedElement);
-      }
-    }
+    <div>4. Which line is the error on?</div>
+    <pre>
+        <code>
+def add(x,y):
+    print(x+y)
+def subtract(x,y):
+    print(x-y)
+def multiply(x,y)
+    print(x*y)
+def divide(x,y):
+    print(x/y)
 
-    async function rotateCharacter(index, calculatedMessage, math, calculatedElement) {
-      var currentChar = math.charAt(index);
-      var rotatedChar = calculatedMessage.charAt(index);
+add(1,2)
+subtract(1,2)
+multiply(1,2)
+divide(1,2)
+        </code>
+    </pre>
+    <input type="text" id="errorLine" name="errorLine" placeholder="Enter line number">
 
-      while (rotatedChar !== currentChar) {
-        rotatedChar = rotateCharacterHelper(rotatedChar);
-        math = math.substring(0, index) + rotatedChar + calculatedMessage.substring(index + 1);
-        calculatedElement.textContent = math;
-        await sleep(1);
-      }
-    }
-
-    function rotateCharacterHelper(char) {
-      var charCode = char.charCodeAt(0);
-      var charIndex = validCharacters.indexOf(char);
-      return validCharacters[(charIndex + 1) % validCharacters.length];
-    }
-
-    // ROT47
-    function def(text) {
-      return text.replace(/./g, function (char) {
-        const charCode = char.charCodeAt(0);
-        if (charCode >= 33 && charCode <= 126) {
-          return String.fromCharCode(33 + ((charCode + 14) % 94));
-        } else {
-          return char;
+    <script>
+        const validCharacters = "-'_?,!.ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
         }
-      });
-    }
-	</script>
+
+        function checkSolution() {
+            document.getElementById("errormsg").textContent = ""
+            tasks = ["lights", "chessNotation", "beeMovie", "errorLine"];
+            solutions = ["eabcace`fb", "#9aR", "hc", "d"]
+            correct = 0
+
+            for (i = 0; i<tasks.length; i++) {
+                inp = document.getElementById(tasks[i]).value
+                inp = String(inp)
+                if (inp == def(solutions[i])) {
+                    correct++
+                }
+            }
+            if (correct == solutions.length) {
+                recode()
+            }
+            else {
+                document.getElementById("errormsg").textContent = "One or more inputs are wrong"
+            }
+        }
+
+        async function recode() {
+            var calculatedElement = document.getElementById("calculatedMessage");
+            var calculatedMessage = calculatedElement.textContent;
+            var math = def(calculatedMessage);
+
+            for (var i = 0; i < calculatedMessage.length; i++) {
+                await rotateCharacter(i, calculatedMessage, math, calculatedElement);
+            }
+        }
+
+        async function rotateCharacter(index, calculatedMessage, math, calculatedElement) {
+            var currentChar = math.charAt(index);
+            var rotatedChar = calculatedMessage.charAt(index);
+
+            while (rotatedChar !== currentChar){//.toUpperCase()) {
+                rotatedChar = rotateCharacterHelper(rotatedChar);
+                math = math.substring(0, index) + rotatedChar + calculatedMessage.substring(index + 1);
+                calculatedElement.textContent = math;
+                await sleep(0.1);
+            }
+        }
+
+        function rotateCharacterHelper(char) {
+            var charCode = char.charCodeAt(0);
+            var charIndex = validCharacters.indexOf(char);
+            return validCharacters[(charIndex + 1) % validCharacters.length];
+        }
+
+        // ROT47
+        function def(text) {
+            return text.replace(/./g, function (char) {
+                const charCode = char.charCodeAt(0);
+                if (charCode >= 33 && charCode <= 126) {
+                    return String.fromCharCode(33 + ((charCode + 14) % 94));
+                } else {
+                    return char;
+                }
+            });
+        }
+    </script>
 </body>
 </html>
