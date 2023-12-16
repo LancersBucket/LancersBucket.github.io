@@ -1,6 +1,7 @@
 ---
 layout: single
-classes: ultrawide
+classes:
+  - ultrawide
 permalink: /2/
 author_profile: false
 ---
@@ -18,12 +19,14 @@ s@?VE J@F F?56CDE2?5n %96C6 H2D ?@ @?6 E@ =:DE6? E@P %96C6 H2D ?@ @?6 =67E 7@C >
 *@F 2C6 F?8C2E67F= 7@C H92E x 92G6 8:G6? J@FP
 &?8C2E67F=n xV> E96 F?8C2E67F= @?6n *@F 3C@F89E 25G6?EFC6CD :?E@ E9:D H@C=5 2?5 232?5@?65 FD E96 >@>6?E H6 8@E DEC@?86C]]] *@F ?6G6C 42C65 23@FE >6 7C@> E96 368:??:?8[ 5:5 J@Fn xVG6 DA6?E 9F?5C65D @7 J62CD 5C62>:?8 @7 E9:D >@>6?E] xVG6 C6962CD65 6G6CJE9:?8 x 6G6C H2?E65 E@ D2J E@ J@F[ 6G6CJ H@C5[ E@ >2<6 J@F F?56CDE2?5 6I24E=J H92E J@F DE@=6 7C@> >6] qFE ?@H x C62=:K6]]] x 5@?VE ?665 J@F E@ F?56CDE2?5 2?JE9:?8] x 5@?VE ?665 J@F 2E 2==] x H:== E2<6 >J C:89E7F= A=246 :? E9:D F?:G6CD6[ 2?5 x H:== 5@ :E 72C 36EE6C E92? J@F 6G6C 4@F=5]</div>
 
-<br>
 
-1\. The column number of each light from left to right, top to bottom i.e. (r1c2, r1c5, r2c3, = 253) [https://puzz.link/p?akari/7/9/o..agcgaj.j2.jbi.l11..cl](https://puzz.link/p?akari/7/9/o..agcgaj.j2.jbi.l11..cl){:target='_blank'}:
+**Disclaimer:** Make sure to write down the solutions somewhere else in case you need to refresh the page.
+{: .notice .notice--warning}
+
+1\. The column number of each bulb from left to right, top to bottom i.e. (r1c2, r1c5, r2c3 = 253) [https://puzz.link/p?akari/7/9/o..agcgaj.j2.jbi.l11..cl](https://puzz.link/p?akari/7/9/o..agcgaj.j2.jbi.l11..cl){:target='_blank'}:
 <input type="text" id="lights" name="lights" placeholder="Enter column numbers">
 
-2\. Full chess notation of solution [https://chesspuzzle.net/Puzzle/284336](https://chesspuzzle.net/Puzzle/284336){:target='_blank'}:
+2\. Full chess notation of the solution (i.e. Qe4) [https://chesspuzzle.net/Puzzle/284336](https://chesspuzzle.net/Puzzle/284336){:target='_blank'}:
 <input type="text" id="chessNotation" name="chessNotation" placeholder="Enter chess notation">
 
 3\. Number of times the word "bee" and only "bee" spoken in The Bee Movie?
@@ -47,8 +50,8 @@ divide(1,2)
 {% endhighlight %}
 <input type="text" id="errorLine" name="errorLine" placeholder="Enter line number">
 
-5\. Solve the Crossword; First letter of every answer in order from 1-27 in all caps (if two clues share the same letter only include it once, i.e. 1. Water, 1. Wind, 2. Cactus, 3. Water = WCW)<br>
-*(Clue 19 should say Tier 2 Entity but I didn't notice until I already finished making it please don't shoot me)*
+5\. Solve the Crossword; First letter of every answer in order from 1-27 in all caps (if two clues share the same letter only include it once, i.e. 1. Water, 1. Wind, 2. Cactus, 3. Water = WCW):<br>
+*Clue 19 should say Tier 2 Entity but I didn't notice until I already finished making it please don't shoot me*
 ![](../assets/images/arg2/crossword.png)
 <input type="text" id="crossword" name="crossword" placeholder="Enter solution">
 
