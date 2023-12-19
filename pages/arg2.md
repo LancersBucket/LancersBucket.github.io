@@ -29,10 +29,7 @@ s@?VE J@F F?56CDE2?5n %96C6 H2D ?@ @?6 E@ =:DE6? E@P %96C6 H2D ?@ @?6 =67E 7@C >
 2\. Full chess notation of the solution (i.e. Qe4) [https://chesspuzzle.net/Puzzle/284336](https://chesspuzzle.net/Puzzle/284336){:target='_blank'}:
 <input type="text" id="chessNotation" name="chessNotation" placeholder="Enter chess notation">
 
-3\. Number of times the word "bee" and only "bee" spoken in The Bee Movie?
-<input type="text" id="beeMovie" name="beeMovie" placeholder="Enter the count">
-
-4\. Which line is the syntax error on in this python code?
+3\. Which line is the syntax error on in this python code?
 {% highlight python linenos %}
 def add(x,y):
 print(x+y)
@@ -50,7 +47,7 @@ divide(1,2)
 {% endhighlight %}
 <input type="text" id="errorLine" name="errorLine" placeholder="Enter line number">
 
-5\. Solve the Crossword; First letter of every answer in order from 1-27 in all caps (if two clues share the same letter only include it once, i.e. 1. Water, 1. Wind, 2. Cactus, 3. Water = WCW):<br>
+4\. Solve the Crossword; First letter of every answer in order from 1-27 in all caps (if two clues share the same letter only include it once, i.e. 1. Water, 1. Wind, 2. Cactus, 3. Water = WCW):<br>
 *Clue 19 should say Tier 2 Entity but I didn't notice until I already finished making it please don't shoot me*
 ![](../assets/images/arg2/crossword.png)
 <input type="text" id="crossword" name="crossword" placeholder="Enter solution">
@@ -66,8 +63,8 @@ divide(1,2)
 
 	function checkSolution() {
 		document.getElementById("errormsg").textContent = ""
-		tasks = ["lights", "chessNotation", "beeMovie", "errorLine", "crossword"];
-		solutions = ["eabcace`fb", "#9aR", "hc", "d", "'q%sx~$!qz$w#sr'p|v}}y$~{uv"]
+		tasks = ["lights", "chessNotation", "errorLine", "crossword"];
+		solutions = ["eabcace`fb", "#9aR", "d", "'q%sx~$!qz$w#sr'p|v}}y$~{uv"]
 		correct = 0
 
 		for (i = 0; i<tasks.length; i++) {
