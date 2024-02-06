@@ -53,7 +53,8 @@ email:
 author:
   name             : "Name"
   avatar           : "/assets/images/bio/bio.jpg"
-  bio              : "\"It do be how it do be though sometimes-times\""
+  bio              : '"It do be how it do be though sometimes-times"<br>
+                      she/her'
   email            :
   links:
     - label: "GitHub"
