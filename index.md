@@ -12,7 +12,11 @@ title: About Me
 18 year old Computer Science student at West Chester University.
 
 Languages I work with:
-- GDScript
+- GDScript <img src="assets/images/godotengine.svg" width="22px" height="21px" style="box-sizing: border-box; margin:0 0 6px"/>
 - Java <i class="fa-brands fa-java"></i>
 - Javascript <i class="fa-brands fa-js"></i>
+- Powershell <i class="fa-solid fa-terminal"></i>
 - Python <i class="fa-brands fa-python"></i>
+
+# Experience
+- 

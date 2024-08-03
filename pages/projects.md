@@ -8,7 +8,7 @@ author_profile: true
 title: ""
 projects:
   - title: "The Rat And The Hat"
-    excerpt: "A game made for [Go Godot Jam 4 (2023)](https://itch.io/jam/go-godot-jam-4){:target='_blank'} on itch.io. <br> Lead Programmer <br><br> [Live Demo](https://itch.io/jam/go-godot-jam-4/rate/2070002){:target='_blank' .btn .btn--primary .btn--large} [Source Code](https://github.com/LancersBucket/GodotGame){:target='_blank' .btn .btn--primary .btn--large}"
+    excerpt: "A game made for [Go Godot Jam 4 (2023)](https://itch.io/jam/go-godot-jam-4){:target='_blank'} on itch.io. <br> - Lead Programmer <br><br> [Live Demo](https://itch.io/jam/go-godot-jam-4/rate/2070002){:target='_blank' .btn .btn--primary .btn--large} [Source Code](https://github.com/LancersBucket/GodotGame){:target='_blank' .btn .btn--primary .btn--large}"
     #image_path: "https://img.itch.zone/aW1nLzEyMTc0NTIzLnBuZw==/315x250%23c/TzYBG0.png" #/assets/images/projects/ratandthehat.png
     #alt: "The Rat And The Hat"
   - title: "lancersbucket. github.io"
