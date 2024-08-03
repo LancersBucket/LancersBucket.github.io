@@ -2,8 +2,10 @@
 layout: single
 permalink: "/"
 author_profile: true
-title: Landing Page
+title: About Me
 ---
+
+Computer Science student at West Chester University.
 
 I work on random projects and make video games.
 
