@@ -1,1 +1,1 @@
-Site to serve as my CV/Resume
+https://lancersbucket.github.io

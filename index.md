@@ -11,8 +11,6 @@ title: About Me
 
 18 year old Computer Science student at West Chester University.
 
-I work on random projects and make video games.
-
 Languages I work with:
 - GDScript
 - Java <i class="fa-brands fa-java"></i>

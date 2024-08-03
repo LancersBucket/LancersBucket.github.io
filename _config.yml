@@ -46,8 +46,8 @@ atom_feed:
 masthead_title: "How Doers Get More Done"
 
 # Footer
-name: Fey Raptor
-email: 
+name: Freya Glick
+email: freya.glick@gmail.com
 
 # Site Author
 author:
@@ -57,6 +57,9 @@ author:
                       she/her'
   email            :
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:freya.glick@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/LancersBucket"
