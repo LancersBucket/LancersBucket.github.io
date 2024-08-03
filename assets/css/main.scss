@@ -8,26 +8,31 @@
 
 // Ultrawide class to be supah wide compared to the wide class
 .ultrawide {
-  .page {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
-    width: 100%;
-    @include breakpoint($large) {
-      padding-left: 0;
+    .page {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em;
+        width: 100%;
+        @include breakpoint($large) {
+            padding-left: 0;
+        }
+        @include breakpoint($x-large) {
+        padding-left: 0;
+        }
     }
-
-    @include breakpoint($x-large) {
-      padding-left: 0;
+    .page__related {
+        @include breakpoint($large) {
+            padding-left: 0;
+        }
+        @include breakpoint($x-large) {
+            padding-left: 0;
+        }
     }
-  }
-  .page__related {
-    @include breakpoint($large) {
-      padding-left: 0;
+}
+.misc {
+    .page {
+        .feature__wrapper .archive__item-title {
+            word-wrap: anywhere
+        }
     }
-
-    @include breakpoint($x-large) {
-      padding-left: 0;
-    }
-  }
 }
