@@ -30,11 +30,9 @@ livereload: true
 github: [metadata]
 
 # Search Engine Information
-title: My Website
+title: lancersbucket.github.io
 description: >- # this means to ignore newlines until "next tag:"
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  Donec adipiscing tristique risus nec feugiat in fermentum posuere. Cras fermentum odio eu feugiat.
-  Tristique nulla aliquet enim tortor at auctor urna. Ornare arcu odio ut sem nulla.
+  Description.
 baseurl:
 url: https://lancersbucket.github.io # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -43,7 +41,7 @@ atom_feed:
   hide: true
 
 # Header
-masthead_title: "How Doers Get More Done"
+masthead_title: "lancersbucket.github.io"
 
 # Footer
 name: Freya Glick
@@ -53,7 +51,7 @@ email: freya.glick@gmail.com
 author:
   name             : "Freya Glick"
   avatar           : "/assets/images/bio/bio.jpg"
-  bio              : '"It do be how it do be though sometimes-times"<br>
+  bio              : 'The day may be over but there is still more coding to do<br>
                       she/her'
   email            :
   links:

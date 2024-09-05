@@ -10,7 +10,7 @@ classes: wide
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 
-18 year old Computer Science student at West Chester University.
+19 year old Computer Science student at West Chester University.
 
 Languages I work with:
 - GDScript <img src="assets/images/godotengine.svg" width="22px" height="21px" style="box-sizing: border-box; margin:0 0 6px"/>
