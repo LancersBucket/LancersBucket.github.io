@@ -62,7 +62,6 @@
 				puzzEl.delegate('input', 'keyup', function (e) {
 					mode = 'interacting';
 
-
 					// need to figure out orientation up front, before we attempt to highlight an entry
 					switch (e.which) {
 						case 39:
@@ -78,31 +77,25 @@
 					}
 
 					if (e.keyCode === 9 || e.keyCode === 16 || e.keyCode === 46) {
+						//puzInit.checkAnswer(e);
 						return false;
 					} else if (
-						e.keyCode === 37 ||
-						e.keyCode === 38 ||
-						e.keyCode === 39 ||
-						e.keyCode === 40 ||
-						e.keyCode === 8 ||
-						e.keyCode === 46) {
+						e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40 || e.keyCode === 8 || e.keyCode === 46) {
+							puzInit.checkAnswer(e);
+							if (e.keyCode === 8 || e.keyCode === 46) {
+								currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38);
+							} else {
+								//nav.nextPrevNav(e);
+							}
 
+							e.preventDefault();
 
-
-						if (e.keyCode === 8 || e.keyCode === 46) {
 							currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38);
-						} else {
-							nav.nextPrevNav(e);
-						}
-
-						e.preventDefault();
-						return false;
+							return false;
 					} else {
-
 						console.log('input keyup: ' + solvedToggle);
-
 						puzInit.checkAnswer(e);
-
+						//currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38);
 					}
 
 					e.preventDefault();
@@ -111,13 +104,11 @@
 
 				// tab navigation handler setup
 				puzzEl.delegate('input', 'keydown', function (e) {
-
 					if (e.keyCode === 9) {
-
 						mode = "setting ui";
 						if (solvedToggle) solvedToggle = false;
 
-						//puzInit.checkAnswer(e)
+						puzInit.checkAnswer(e)
 						nav.updateByEntry(e);
 
 					} else {
@@ -137,7 +128,6 @@
 
 					nav.updateByEntry(e);
 					e.preventDefault();
-
 				});
 
 
@@ -298,17 +288,13 @@
 				if (numMatches === numMatchedAll) {
 					console.log("puzzle solved!!!!!!!");
 					document.getElementById("complete").style.display = 'initial';
-					//document.getElementById("complete").innerHTML = "lancersbucket.github.io/4"
 				} else {
-					console.log("not yet ...");
+					//console.log("not yet ...");
 				}
 
 				var valToCheck, currVal;
-
 				util.getActivePositionFromClassGroup($(e.target));
-
 				valToCheck = puzz.data[activePosition].answer.toLowerCase();
-
 				currVal = $('.position-' + activePosition + ' input')
 					.map(function () {
 						return $(this)
@@ -316,9 +302,9 @@
 							.toLowerCase();
 					})
 					.get()
-					.join('');
+					.join('').toLowerCase();
 
-				//console.log(currVal + " " + valToCheck);
+				console.log(currVal + " " + valToCheck);
 				if (valToCheck === currVal) {
 					$('.active')
 						.addClass('done')
@@ -330,23 +316,29 @@
 					solvedToggle = true;
 					return;
 				}
+				else {
+					$('.position-' + activePosition + ' input')
+						.addClass('active')
+						.removeClass('done');
+
+					$('.clues-active').removeClass('clue-done');
+
+					solved.splice(solved.indexOf(valToCheck),1);
+					solvedToggle = false;
+					//currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38);
+					//return;
+				}
 
 				currOri === 'across' ? nav.nextPrevNav(e, 39) : nav.nextPrevNav(e, 40);
 
 				//z++;
 				//console.log(z);
 				//console.log('checkAnswer() solvedToggle: '+solvedToggle);
-
 			}
-
-
 		}; // end puzInit object
 
-
 		var nav = {
-
 			nextPrevNav: function (e, override) {
-
 				var len = $actives.length,
 					struck = override ? override : e.which,
 					el = $(e.target),
@@ -431,7 +423,6 @@
 
 				activeClueIndex = $(clueLiEls).index(e.target);
 				//console.log('updateByNav() activeClueIndex: '+activeClueIndex);
-
 			},
 
 			// Sets activePosition var and adds active class to current entry
@@ -451,8 +442,6 @@
 					// skips over already-solved problems
 					util.getSkips(activeClueIndex);
 					activePosition = $(clueLiEls[activeClueIndex]).data('position');
-
-
 				} else {
 					activeClueIndex = activeClueIndex === clueLiEls.length - 1 ? 0 : ++activeClueIndex;
 
@@ -550,8 +539,8 @@
 					if (valToCheck === solved[i]) {
 						return true;
 					}
-
 				}
+				return false;
 			},
 
 			getSkips: function (position) {
