@@ -89,7 +89,7 @@
 							}
 
 							e.preventDefault();
-
+							puzInit.checkAnswer(e);
 							currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38);
 							return false;
 					} else {
@@ -138,6 +138,7 @@
 					if (!e.keyCode) {
 						nav.updateByNav(e);
 					}
+					
 					e.preventDefault();
 				});
 
@@ -304,7 +305,7 @@
 					.get()
 					.join('').toLowerCase();
 
-				console.log(currVal + " " + valToCheck);
+				//console.log(currVal + " " + valToCheck);
 				if (valToCheck === currVal) {
 					$('.active')
 						.addClass('done')
@@ -317,13 +318,13 @@
 					return;
 				}
 				else {
-					$('.position-' + activePosition + ' input')
-						.addClass('active')
-						.removeClass('done');
+					//$('.position-' + activePosition + ' input')
+					//	.addClass('active')
+					//	.removeClass('done');
 
-					$('.clues-active').removeClass('clue-done');
+					//$('.clues-active').removeClass('clue-done');
 
-					solved.splice(solved.indexOf(valToCheck),1);
+					//solved.splice(solved.indexOf(valToCheck),1);
 					solvedToggle = false;
 					//currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38);
 					//return;
@@ -366,7 +367,6 @@
 							.select();
 
 						break;
-
 					case 37:
 						p
 							.prev()
@@ -375,7 +375,6 @@
 							.select();
 
 						break;
-
 					case 40:
 						ps
 							.next('tr')
@@ -384,16 +383,13 @@
 							.select();
 
 						break;
-
 					case 38:
 						ps
 							.prev('tr')
 							.find(selector)
 							.addClass('current')
 							.select();
-
 						break;
-
 					default:
 						break;
 				}

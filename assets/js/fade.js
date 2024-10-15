@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     showNextLine(); // Call the function again to show the next line
                 }
             }, 3000); // This timing should match the fade-out duration (set in CSS)
-        }, 1000); // This is how long the line stays visible before fading out
+        }, 7000); // This is how long the line stays visible before fading out
     }
 
     // Start with a delay before the first line shows
