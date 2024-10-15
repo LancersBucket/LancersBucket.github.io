@@ -1,0 +1,23 @@
+/* Add this to your existing CSS */
+#fade-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw;  /* Full width of the viewport */
+    position: fixed; /* Ensure it stays fixed to the viewport */
+    top: 0;
+    left: 0;
+    font-size: 2em;
+    color: black; /* Adjust color based on your design */
+    text-align: center; /* Center text inside the container */
+}
+
+#fade-text-container .text-line {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 2s ease-in-out;
+}
