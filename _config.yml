@@ -32,7 +32,7 @@ github: [metadata]
 # Search Engine Information
 title: lancersbucket.github.io
 description: >- # this means to ignore newlines until "next tag:"
-  Description.
+  LancersBucket's Website
 baseurl:
 url: https://lancersbucket.github.io # the base hostname & protocol for your site, e.g. http://example.com
 

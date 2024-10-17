@@ -62,7 +62,7 @@
 				starty: 13,
 			  },
 			  {
-				clue: "First party memeber to leave",
+				clue: "First party member to leave",
 				answer: "vixen",
 				position: 8,
 				orientation: "across",

@@ -27,4 +27,4 @@ Languages I work with:
 - IT Intern \| [TPD Inc.](https://tpdinc.com/) \| Summer 2022 and Summer 2023
 	- Setup and maintaining computers
 	- Responding to tickets
-- Eagle Scout \| Troop 10, Boy Scouts of America \| 2023
+- Eagle Scout \| 2023
